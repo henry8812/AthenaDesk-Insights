@@ -1,4 +1,4 @@
-# Documento de Requisitos
+# Documento de Requerimientos
 
 ## Información del Proyecto
 
