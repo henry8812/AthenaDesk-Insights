@@ -1,13 +1,19 @@
 /**
  * @author Henry A. Gomez M.
- * @
  */
+
+import graphicData from '../db/graphicData'; // Ajusta la ruta si es necesario
+
 const apiService = {
-    return {
-        getAgents = new Promise( (resolve) => {
-            resolve(null)
-        })
+  getGraphData: async () => {
+    try {
+      // Simplemente retornamos los datos directamente
+      return graphicData;
+    } catch (error) {
+      throw error;
     }
-}
+  },
+  // Otras funciones de servicio...
+};
 
 export default apiService;
