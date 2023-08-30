@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './components/NavBar/NavBar';
+import Sidebar from './components/SideBar/Sidebar'; // Importa el Sidebar
+
 import style from'./App.module.css'
 
 function App() {
@@ -8,6 +10,7 @@ function App() {
     <div className={style.App}>
       <Router>
         <Navbar />
+        <Sidebar/>
         <header className="App-header">
           <h1>AthenaDesk Insights Dashboard</h1>
         </header>
