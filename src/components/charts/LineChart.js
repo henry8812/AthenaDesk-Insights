@@ -3,6 +3,8 @@ import HighchartsReact from 'highcharts-react-official';
 import Highcharts from 'highcharts';
 import apiService from '../../services/apiService';
 import graphicData from '../../db/graphicData';
+import './LineChart.css'; // Importa los estilos específicos para el LineChart
+
 
 const LineChart = ({ title, width, height }) => {
     const [chartOptions, setChartOptions] = useState({});
@@ -11,8 +13,8 @@ const LineChart = ({ title, width, height }) => {
       const options = {
         chart: {
           type: 'line',
-          width: width,
-          height: height
+          width: width || '400',
+          height: height || '300'
         },
         title: {
           text: title,

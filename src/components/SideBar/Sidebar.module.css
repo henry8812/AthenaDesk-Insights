@@ -1,94 +1,104 @@
 /* Sidebar.module.css */
 .sidebar {
-    width: 270px;
-    height: calc(100% - 90px);
-    position: fixed;
-    top: 80px;
-    left: -270px;
-    transition: left 0.3s ease-in-out;
-    background-color: #292c35;
-    color: #fff;
-    
-  }
+  width: 270px;
+  height: calc(100%);
+  position: fixed;
+  left: -270px;
+  transition: left 0.3s ease-in-out;
+  background-color: #292c35;
+  color: #fff;
+  top: 80px;
+
+  z-index: 999;
   
-  .open {
-    left: 0;
-  }
+}
+
+.open {
+  left: 0;
+}
+
+.toggleButton {
   
-  .toggleButton {
-    cursor: pointer;
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    top: 90px;
-    left: 250px;
-    padding: 10px;
-    background-color: #1f2128;
-    text-align: center;
-    color: #fff;
-    border-radius: 50%;
-  }
+  cursor: pointer;
+  position: absolute;
+  width: 25px;
+  height: 25px;
   
-  .sidebarLinks {
-    margin-top: 20px;
-  }
+  left: 250px;
+  padding: 10px;
+  background-color: #1f2128;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.sidebarLinks {
   
-  .sidebarLink {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    color: #ccc;
-    transition: color 0.3s ease;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    width: 85%;
-    margin: 5px auto;
-    font-size: 16px;
-    font-weight: bold;
-    position: relative;
-  }
-  
-  .sidebarLink:hover {
-    color: white;
-    background-color: rgba(138, 43, 226, 0.7);
-    border-radius: 10px;
-  }
-  
-  .sidebarLink i {
-    margin-right: 10px;
-  }
-  
-  .tooltipWrapper {
-    position: absolute;
-    right: -5px; /* Posiciona el tooltip a la derecha del botón */
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  /* Estilos para el tooltip */
-  .tooltip {
-    background-color: #fff !important;
-    color: #333;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    font-size: 14px;
-    padding: 8px;
-    border-radius: 4px;
-    max-width: 200px;
-    text-align: center;
-    opacity: 1; /* Asegura que el tooltip no sea transparente */
-  }
-  
-  .tippy-tooltip-content {
-    background-color: #fff;
-    color: #333;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    font-size: 14px;
-    padding: 8px;
-    border-radius: 4px;
-    max-width: 200px;
-    text-align: center;
-    opacity: 1; /* Asegura que el tooltip no sea transparente */
-  }
+}
+
+.sidebarLink {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #ccc;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  width: 85%;
+  margin: 5px auto;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  text-decoration: none;
+}
+
+.sidebarLink:hover {
+  color: white;
+  background-color: rgba(138, 43, 226, 0.7);
+  border-radius: 10px;
+}
+
+.sidebarLink i {
+  margin-right: 10px;
+}
+
+.tooltipWrapper {
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip {
+  background-color: #fff !important;
+  color: #333;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 4px;
+  max-width: 200px;
+  text-align: center;
+  opacity: 1;
+}
+
+.tippy-tooltip-content {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 4px;
+  max-width: 200px;
+  text-align: center;
+  opacity: 1;
+}
+
+/* Añade un estilo para ajustar el contenido principal cuando el sidebar esté abierto */
+.contentWithSidebarOpen {
+  margin-left: 270px; /* Ancho del sidebar */
+  transition: margin-left 0.3s ease-in-out;
+}
+

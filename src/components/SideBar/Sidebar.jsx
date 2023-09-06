@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
 import styles from './Sidebar.module.css';
 import { Tooltip } from 'react-tippy'; // Importa el componente Tooltip de react-tippy
+import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
+
 
 import 'tippy.js/dist/tippy.css'; // Importa los estilos de tippy
 
-const Sidebar = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+const Sidebar = ({ toggleSidebar }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const toggleSidebar = () => {
+  const handleToggleSidebar = () => {
+    
     setIsSidebarOpen(!isSidebarOpen);
+    toggleSidebar(); // Llama a la función de toggle proporcionada por el padre
+    
   };
 
   const sidebarLinks = [
@@ -24,27 +29,29 @@ const Sidebar = () => {
     { icon: 'fa-question-circle', text: 'Help & Support', route: '/help-support', description: 'Access help and support resources' },
     // Agrega más enlaces aquí
   ];
-
- return (
+  return (
     <div className={`${styles.sidebar} ${isSidebarOpen ? styles.open : ''}`}>
-      <div className={styles.toggleButton} onClick={toggleSidebar}>
+      <div className={styles.toggleButton} onClick={handleToggleSidebar}>
         <i className={`fas ${isSidebarOpen ? 'fa-chevron-left' : 'fa-chevron-right'}`} />
       </div>
       <div className={styles.sidebarLinks}>
         {sidebarLinks.map(link => (
-          <button className={styles.sidebarLink} key={link.route}>
-            <i className={`fas ${link.icon}`} />
-            <span>{link.text}</span>
-            <div className={styles.tooltipWrapper}>
-              <Tooltip title={link.description} position="right" arrow={true} theme="light" distance={50}>
-                <i className="fa fa-question-circle" />
-              </Tooltip>
-            </div>
-          </button>
+          <Link to={link.route} key={link.route}>
+            <button className={styles.sidebarLink}>
+              <i className={`fas ${link.icon}`} />
+              <span>{link.text}</span>
+              <div className={styles.tooltipWrapper}>
+                <Tooltip title={link.description} position="right" arrow={true} theme="light" distance={50}>
+                  <i className="fa fa-question-circle" />
+                </Tooltip>
+              </div>
+            </button>
+          </Link>
         ))}
       </div>
     </div>
   );
 };
+
 
 export default Sidebar;

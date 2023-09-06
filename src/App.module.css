@@ -1,5 +1,38 @@
 .App{
+
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.mainContainer {
+  display: flex;
+  flex-grow: 1;
   background-color: #0f0f12;
   color: #f3f3f3;
-  min-height: 400px;
+  
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding: 20px; /* Agrega espaciado alrededor del contenido */
+  overflow: hidden;
+}
+
+/* App.module.css */
+
+/* ... (otros estilos) */
+
+.contentWithSidebarOpen {
+  margin-left: 270px; /* Ancho del sidebar */
+  transition: margin-left 0.3s ease-in-out;
+  position: relative;
+  top: 70px;
+}
+.graphic1{
+  display: inline-flex;
+  
+  width: 100%;
 }

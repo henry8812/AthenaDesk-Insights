@@ -1,0 +1,8 @@
+/* LineChart.css */
+.custom-chart {
+    /* Estilos para el contenedor del gráfico */
+    
+    position: relative;
+    z-index: 0;
+  }
+  
