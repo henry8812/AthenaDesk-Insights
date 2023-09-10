@@ -1,14 +1,14 @@
 /*!
 
 =========================================================
-* Black Dashboard React v1.2.2
+* Athena Desk Insights
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
+* Product Page: https://github.com/henry8812/AthenaDesk-Insights
+* Copyright 2023 henry8812 (https://github.com/henry8812)
+* Licensed under MIT (https://github.com/henry8812/AthenaDesk-Insights/blob/main/LICENSE.md)
 
-* Coded by Creative Tim
+* Coded by henry8812
 
 =========================================================
 
